@@ -19,30 +19,40 @@ public class PlayerCharacter_1 : MonoBehaviour {
 	void Update () {
 
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire3"))
         {
             print("Punchy punchy");
         }
 
         if(Input.GetAxis("Horizontal") !=0)
         {
-            if(Input.GetAxis("Horizontal") <0)
-            print("Walky walky left");
-            else if(Input.GetAxis("Horizontal") > 0)
-            {
-                print("Walky walky right");
-            }
+            HorizMove(Input.GetAxis("Horizontal"));
         }
 
         if(Input.GetAxis("Vertical") !=0)
         {
-            if (Input.GetAxis("Vertical") < 0)
-                print("Walky walky down");
-            else if (Input.GetAxis("Vertical") > 0)
-            {
-                print("Walky walky up");
-            }
+            VertMove(Input.GetAxis("Vertical"));
         }
 
-    }  
+    }
+    
+    void HorizMove(float i)
+    {
+        if (i < 0)
+            print("Walky walky left");
+        else if (i > 0)
+        {
+            print("Walky walky right");
+        }
+    }
+
+    void VertMove(float i)
+    {
+        if (i < 0)
+            print("Walky walky down");
+        else if (i > 0)
+        {
+            print("Walky walky up");
+        }
+    }
 }
