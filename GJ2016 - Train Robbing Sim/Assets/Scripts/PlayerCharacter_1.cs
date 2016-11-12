@@ -6,7 +6,6 @@ public class PlayerCharacter_1 : MonoBehaviour
     public int Health;
     public int Money;
     private Animator animator;
-    
 
     // Use this for initialization
     private void Start()
@@ -34,7 +33,6 @@ public class PlayerCharacter_1 : MonoBehaviour
         else if (vertical < 0)
         {
             animator.SetInteger("Direction", 0);
-            
         }
         else if (horizontal > 0)
         {
@@ -59,7 +57,7 @@ public class PlayerCharacter_1 : MonoBehaviour
             Player.transform.position = new Vector3(Player.transform.position.x + f / 10, Player.transform.position.y, Player.transform.position.z);
             if (Player.transform.position.x <= -8.25f)
             {
-                Player.transform.position = new Vector3( -8.25f, Player.transform.position.y,Player.transform.position.z);
+                Player.transform.position = new Vector3(-8.25f, Player.transform.position.y, Player.transform.position.z);
             }
             else if (Player.transform.position.x >= 8.25f)
             {
