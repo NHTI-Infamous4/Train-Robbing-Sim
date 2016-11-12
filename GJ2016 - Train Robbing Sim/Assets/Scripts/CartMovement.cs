@@ -32,7 +32,7 @@ public class CartMovement : MonoBehaviour
         }
         if (Time.time >= lastTie + 0.5f)
         {
-            Instantiate(Tie, new Vector3(13.25f, 0), Quaternion.identity);
+            Instantiate(Tie, new Vector3(18f, 0), Quaternion.identity);
             lastTie = Time.time;
         }
     }
