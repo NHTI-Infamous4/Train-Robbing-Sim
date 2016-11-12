@@ -124,5 +124,10 @@ public class PlayerCharacter_1 : MonoBehaviour
                 Money++;
             }
         }
+
+        if (aCol.tag.Equals("Enemy"))
+        {
+            Health = 0;
+        }
     }
 }
