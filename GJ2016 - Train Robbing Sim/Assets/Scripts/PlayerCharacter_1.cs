@@ -59,6 +59,11 @@ public class PlayerCharacter_1 : MonoBehaviour
             float f = Input.GetAxis("Vertical");
             Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f, Player.transform.position.z);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void OnColliderEnter(Collider aCol)
