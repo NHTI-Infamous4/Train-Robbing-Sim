@@ -3,14 +3,18 @@
 public class PlayerCharacter_1 : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Cart;
     public int Health;
     public int Money;
+    private bool isOffset = false;
+    private Vector3 OrigPos;
 
     // Use this for initialization
     private void Start()
     {
         Health = 100;
         Money = 0;
+        OrigPos = Cart.transform.position = Vector3.zero;
         Random.InitState((int)Time.time);
     }
 
@@ -18,7 +22,16 @@ public class PlayerCharacter_1 : MonoBehaviour
     private void Update()
     {
         CheckInput();
-
+        if(isOffset)
+        {
+            Cart.transform.position = OrigPos;
+            isOffset = false;
+        }
+        else if(Random.Range(1,100) <1.25)
+        {
+            Cart.transform.position = new Vector3(Cart.transform.position.x, Cart.transform.position.y + 0.5f, Cart.transform.position.z);
+            isOffset = true;
+        }
         if(Health <= 0)
         {
             Destroy(gameObject);
