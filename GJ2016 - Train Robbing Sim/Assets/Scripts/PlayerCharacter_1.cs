@@ -55,4 +55,22 @@ public class PlayerCharacter_1 : MonoBehaviour {
             print("Walky walky up");
         }
     }
+
+    void OnCollisionEnter(Collider aCol)
+    {
+        if(aCol.tag.Equals("Money"))
+        {
+            Money++;
+        }
+
+        if(aCol.tag.Equals("BigMoney"))
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                Money++;
+            }
+        }
+    }
 }
+
+
