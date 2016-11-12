@@ -28,4 +28,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+UnityLockfile
 /GJ2016 - Train Robbing Sim/Temp/UnityLockfile
