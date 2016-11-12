@@ -1,14 +1,12 @@
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEditor.dll
-C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.dll
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.xml
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
-C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_bin\Debug\UnityEditor.xml
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_obj\Debug\GJ2016 - Train Robbing Sim.CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Steven\Source\Repos\Train-Robbing-Sim\GJ2016 - Train Robbing Sim\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
