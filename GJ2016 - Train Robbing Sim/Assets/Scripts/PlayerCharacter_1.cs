@@ -55,11 +55,11 @@ public class PlayerCharacter_1 : MonoBehaviour
             if (Player.transform.position.x < 13.75f)
             {
                 Player.transform.position = new Vector3(Player.transform.position.x + 0.1f, Player.transform.position.y, Player.transform.position.z);
-                Camera.transform.position = new Vector3(Camera.transform.position.x + 0.285f, Camera.transform.position.y, Camera.transform.position.z);
+                Camera.transform.position = new Vector3(Camera.transform.position.x + 0.289f, Camera.transform.position.y, Camera.transform.position.z);
             }
             else
             {
-                Player.transform.position = new Vector3(-7f, Player.transform.position.y, Player.transform.position.z);
+                Player.transform.position = new Vector3(-6.5f, Player.transform.position.y, Player.transform.position.z);
                 Camera.transform.position = new Vector3(0,0,-10f);
                 InputEnabled = true;
             }
