@@ -5,7 +5,6 @@
 -r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll"
 -r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
 -r:"C:/Program Files/Unity/Editor/Data\Managed/Mono.Cecil.dll"
 -r:"C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Common.dll"
@@ -17,7 +16,6 @@
 -define:UNITY_5_4_2
 -define:UNITY_5_4
 -define:UNITY_5
--define:UNITY_ANALYTICS
 -define:ENABLE_NEW_BUGREPORTER
 -define:ENABLE_AUDIO
 -define:ENABLE_CACHING
@@ -90,6 +88,6 @@
 -define:UNITY_EDITOR_WIN
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-Assets/Scripts/NewBehaviourScript.cs
+Assets/Scripts/PlayerCharacter_1.cs
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
