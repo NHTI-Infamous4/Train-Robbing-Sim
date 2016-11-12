@@ -22,13 +22,13 @@ public class LevelMusic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H)) // TO BE REMOVED LATER
         {
             Source.clip = Intense;
             Source.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J)) // TO BE REMOVED LATER
         {
             Source.clip = Normal;
             Source.Play();
