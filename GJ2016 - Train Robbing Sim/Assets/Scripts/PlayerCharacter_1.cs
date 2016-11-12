@@ -23,22 +23,21 @@ public class PlayerCharacter_1 : MonoBehaviour
     private void Update()
     {
         CheckInput();
-        if(isOffset)
+        if (isOffset)
         {
             Cart.transform.position = OrigPos;
             isOffset = false;
         }
-        else if(Time.time >= lastShake + 5)
+        else if (Time.time >= lastShake + 5)
         {
             Cart.transform.position = new Vector3(Cart.transform.position.x, Cart.transform.position.y + 0.1f, Cart.transform.position.z);
             lastShake = Time.time;
             isOffset = true;
         }
-        if(Health <= 0)
+        if (Health <= 0)
         {
             Destroy(gameObject);
         }
-
     }
 
     private void CheckInput()
@@ -51,13 +50,13 @@ public class PlayerCharacter_1 : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0)
         {
             float f = Input.GetAxis("Horizontal");
-            Player.transform.position = new Vector3(Player.transform.position.x + f, Player.transform.position.y, Player.transform.position.z);
+            Player.transform.position = new Vector3(Player.transform.position.x + f / 10, Player.transform.position.y, Player.transform.position.z);
         }
 
         if (Input.GetAxis("Vertical") != 0)
         {
             float f = Input.GetAxis("Vertical");
-            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f, Player.transform.position.z);
+            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f / 10, Player.transform.position.z);
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -66,21 +65,19 @@ public class PlayerCharacter_1 : MonoBehaviour
         }
     }
 
-    void OnColliderEnter(Collider aCol)
+    private void OnColliderEnter(Collider aCol)
     {
-        if(aCol.tag.Equals("Money"))
+        if (aCol.tag.Equals("Money"))
         {
             Money++;
         }
 
-        if(aCol.tag.Equals("BigMoney"))
+        if (aCol.tag.Equals("BigMoney"))
         {
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Money++;
             }
         }
     }
 }
-
-
