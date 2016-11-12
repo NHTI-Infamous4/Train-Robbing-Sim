@@ -7,6 +7,7 @@ public class PlayerCharacter_1 : MonoBehaviour
     public int Health;
     public int Money;
     private bool isOffset = false;
+    private float lastShake = 0f;
     private Vector3 OrigPos;
 
     // Use this for initialization
@@ -27,9 +28,10 @@ public class PlayerCharacter_1 : MonoBehaviour
             Cart.transform.position = OrigPos;
             isOffset = false;
         }
-        else if(Random.Range(1,100) <1.25)
+        else if(Time.time >= lastShake + 5)
         {
-            Cart.transform.position = new Vector3(Cart.transform.position.x, Cart.transform.position.y + 0.5f, Cart.transform.position.z);
+            Cart.transform.position = new Vector3(Cart.transform.position.x, Cart.transform.position.y + 0.1f, Cart.transform.position.z);
+            lastShake = Time.time;
             isOffset = true;
         }
         if(Health <= 0)
