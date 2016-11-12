@@ -19,6 +19,11 @@ public class PlayerCharacter_1 : MonoBehaviour
     {
         CheckInput();
 
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void CheckInput()
@@ -41,7 +46,7 @@ public class PlayerCharacter_1 : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collider aCol)
+    void OnColliderEnter(Collider aCol)
     {
         if(aCol.tag.Equals("Money"))
         {
