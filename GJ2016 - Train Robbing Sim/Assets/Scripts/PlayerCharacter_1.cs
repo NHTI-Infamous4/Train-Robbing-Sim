@@ -20,27 +20,27 @@ public class PlayerCharacter_1 : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W))
         {
-
+            print("Walky walky up");
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-
+            print("Walky walky down");
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-
+            print("Walky walky left");
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-
+            print("Walky walky right");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            print("Punchy punchy");
         }
 
     }  
