@@ -1,23 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Enemy : MonoBehaviour {
-
+public class Enemy : MonoBehaviour
+{
     public int Health;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    private void Start()
+    {
         Health = 100;
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+    // Update is called once per frame
+    private void Update()
+    {
         if (Health <= 0)
         {
             Destroy(gameObject);
         }
-	
-	}
+    }
 }

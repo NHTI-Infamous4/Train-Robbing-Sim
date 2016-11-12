@@ -47,7 +47,7 @@ public class PlayerCharacter_1 : MonoBehaviour
         }
         */
 
-        if(Player.transform.position.x >= 7 &&
+        if (Player.transform.position.x >= 7 &&
             Player.transform.position.y < .75f &&
             Player.transform.position.y > -.75f)
         {
@@ -60,7 +60,7 @@ public class PlayerCharacter_1 : MonoBehaviour
             else
             {
                 Player.transform.position = new Vector3(-6.5f, Player.transform.position.y, Player.transform.position.z);
-                Camera.transform.position = new Vector3(0,0,-10f);
+                Camera.transform.position = new Vector3(0, 0, -10f);
                 InputEnabled = true;
             }
         }
