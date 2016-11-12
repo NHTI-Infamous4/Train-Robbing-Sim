@@ -40,4 +40,22 @@ public class PlayerCharacter_1 : MonoBehaviour
             Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f, Player.transform.position.z);
         }
     }
+
+    void OnCollisionEnter(Collider aCol)
+    {
+        if(aCol.tag.Equals("Money"))
+        {
+            Money++;
+        }
+
+        if(aCol.tag.Equals("BigMoney"))
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                Money++;
+            }
+        }
+    }
 }
+
+
