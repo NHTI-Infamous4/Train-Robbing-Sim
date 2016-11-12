@@ -5,7 +5,7 @@ public class PlayerCharacter_1 : MonoBehaviour
     public GameObject Player;
     public int Health;
     public int Money;
-    private Animator animator;
+    //private Animator animator;
 
     // Use this for initialization
     private void Start()
@@ -25,7 +25,7 @@ public class PlayerCharacter_1 : MonoBehaviour
 
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");
-
+        /*
         if (vertical > 0)
         {
             animator.SetInteger("Direction", 2);
@@ -42,6 +42,7 @@ public class PlayerCharacter_1 : MonoBehaviour
         {
             animator.SetInteger("Direction", 3);
         }
+        */
     }
 
     private void CheckInput()
