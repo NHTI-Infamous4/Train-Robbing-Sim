@@ -38,5 +38,10 @@ public class PlayerCharacter_1 : MonoBehaviour {
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+        }
+
     }  
 }
