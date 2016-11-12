@@ -1,58 +1,43 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlayerCharacter_1 : MonoBehaviour {
-
+public class PlayerCharacter_1 : MonoBehaviour
+{
+    public GameObject Player;
     public int Health;
     public int Money;
 
-
-	// Use this for initialization
-	void Start () {
-
+    // Use this for initialization
+    private void Start()
+    {
         Health = 100;
         Money = 0;
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        Random.InitState((int)Time.time);
+    }
 
-        
+    // Update is called once per frame
+    private void Update()
+    {
+        CheckInput();
+
+    }
+
+    private void CheckInput()
+    {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire3"))
         {
             print("Punchy punchy");
         }
 
-        if(Input.GetAxis("Horizontal") !=0)
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            HorizMove(Input.GetAxis("Horizontal"));
+            float f = Input.GetAxis("Horizontal");
+            Player.transform.position = new Vector3(Player.transform.position.x + f, Player.transform.position.y, Player.transform.position.z);
         }
 
-        if(Input.GetAxis("Vertical") !=0)
+        if (Input.GetAxis("Vertical") != 0)
         {
-            VertMove(Input.GetAxis("Vertical"));
-        }
-
-    }
-    
-    void HorizMove(float i)
-    {
-        if (i < 0)
-            print("Walky walky left");
-        else if (i > 0)
-        {
-            print("Walky walky right");
-        }
-    }
-
-    void VertMove(float i)
-    {
-        if (i < 0)
-            print("Walky walky down");
-        else if (i > 0)
-        {
-            print("Walky walky up");
+            float f = Input.GetAxis("Vertical");
+            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f, Player.transform.position.z);
         }
     }
 }
