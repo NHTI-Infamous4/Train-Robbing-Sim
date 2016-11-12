@@ -34,6 +34,7 @@ public class PlayerCharacter_1 : MonoBehaviour
         else if (vertical < 0)
         {
             animator.SetInteger("Direction", 0);
+            
         }
         else if (horizontal > 0)
         {
@@ -56,12 +57,28 @@ public class PlayerCharacter_1 : MonoBehaviour
         {
             float f = Input.GetAxis("Horizontal");
             Player.transform.position = new Vector3(Player.transform.position.x + f / 10, Player.transform.position.y, Player.transform.position.z);
+            if (Player.transform.position.x <= -8.25f)
+            {
+                Player.transform.position = new Vector3( -8.25f, Player.transform.position.y,Player.transform.position.z);
+            }
+            else if (Player.transform.position.x >= 8.25f)
+            {
+                Player.transform.position = new Vector3(8.25f, Player.transform.position.y, Player.transform.position.z);
+            }
         }
 
         if (Input.GetAxis("Vertical") != 0)
         {
             float f = Input.GetAxis("Vertical");
             Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + f / 10, Player.transform.position.z);
+            if (Player.transform.position.y <= -3.5f)
+            {
+                Player.transform.position = new Vector3(Player.transform.position.x, -3.5f, Player.transform.position.z);
+            }
+            else if (Player.transform.position.y >= 3.5f)
+            {
+                Player.transform.position = new Vector3(Player.transform.position.x, 3.5f, Player.transform.position.z);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
