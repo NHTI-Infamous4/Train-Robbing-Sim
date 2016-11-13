@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerCharacter_1 : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PlayerCharacter_1 : MonoBehaviour
     public int Health;
     public int Money;
     private bool InputEnabled = true;
+    public AudioSource Source;
+    public AudioMixerSnapshot Coin;
     //private Animator animator;
 
     // Use this for initialization
@@ -110,18 +113,23 @@ public class PlayerCharacter_1 : MonoBehaviour
         }
     }
 
-    private void OnColliderEnter(Collider aCol)
+    private void OnTriggerEnter(Collider aCol)
     {
         if (aCol.tag.Equals("Money"))
         {
             Money++;
+            Source.Play();
+            Destroy(aCol);
         }
 
         if (aCol.tag.Equals("BigMoney"))
         {
+            Destroy(aCol);
+
             for (int i = 0; i < 5; i++)
             {
                 Money++;
+                Source.Play();
             }
         }
 
