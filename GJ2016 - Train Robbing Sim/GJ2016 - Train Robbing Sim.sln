@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJ2016 - Train Robbing Sim.CSharp", "GJ2016 - Train Robbing Sim.CSharp.csproj", "{13E52031-E0C3-48C8-55D1-7289600C327F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJ2016 - Train Robbing Sim.CSharp.Editor", "GJ2016 - Train Robbing Sim.CSharp.Editor.csproj", "{D8AB8899-0BF5-87BD-6083-07B8963C8140}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{13E52031-E0C3-48C8-55D1-7289600C327F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E52031-E0C3-48C8-55D1-7289600C327F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E52031-E0C3-48C8-55D1-7289600C327F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8AB8899-0BF5-87BD-6083-07B8963C8140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AB8899-0BF5-87BD-6083-07B8963C8140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AB8899-0BF5-87BD-6083-07B8963C8140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AB8899-0BF5-87BD-6083-07B8963C8140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
