@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviour
                 {                  
                     if (gameObject.transform.position.x >= 6)
                     {
-                        animator.SetInteger("Direction", 0);
                         gameObject.transform.position = new Vector3(6, 2, -2);
                         PatrolStatus = direction.Down;
                     }
@@ -64,7 +63,6 @@ public class Enemy : MonoBehaviour
 
                     if (gameObject.transform.position.y <= -2)
                     {
-                        
                         gameObject.transform.position = new Vector3(6, -2, -2);
                         PatrolStatus = direction.Left;
                     }
@@ -77,7 +75,7 @@ public class Enemy : MonoBehaviour
                 }
             case direction.Left:
                 {
-                    animator.SetInteger("Direction", 2);
+                    
 
                     if (gameObject.transform.position.x <= 0)
                     {
@@ -86,13 +84,14 @@ public class Enemy : MonoBehaviour
                     }
                     else
                     {
+                        animator.SetInteger("Direction", 2);
                         gameObject.transform.position = new Vector3(gameObject.transform.position.x - Speed, gameObject.transform.position.y, gameObject.transform.position.z);
                     }
                     break;
                 }
             case direction.Up:
                 {
-                    animator.SetInteger("Direction", 3);
+                    
 
                     if (gameObject.transform.position.y >= 2)
                     {
@@ -101,6 +100,7 @@ public class Enemy : MonoBehaviour
                     }
                     else
                     {
+                        animator.SetInteger("Direction", 3);
                         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + Speed, gameObject.transform.position.z);
                     }
                     break;
