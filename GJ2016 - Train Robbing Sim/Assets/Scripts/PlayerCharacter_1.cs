@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
 public class PlayerCharacter_1 : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Camera;
+    public AudioSource Source;
     public int Health;
     public int Money;
     private bool InputEnabled = true;
-    public AudioSource Source;
-    public AudioMixerSnapshot Coin;
     //private Animator animator;
 
     // Use this for initialization
@@ -58,12 +55,10 @@ public class PlayerCharacter_1 : MonoBehaviour
             if (Player.transform.position.x < 13.75f)
             {
                 Player.transform.position = new Vector3(Player.transform.position.x + 0.1f, Player.transform.position.y, Player.transform.position.z);
-                Camera.transform.position = new Vector3(Camera.transform.position.x + 0.289f, Camera.transform.position.y, Camera.transform.position.z);
             }
             else
             {
                 Player.transform.position = new Vector3(-6.5f, Player.transform.position.y, Player.transform.position.z);
-                Camera.transform.position = new Vector3(0, 0, -10f);
                 InputEnabled = true;
             }
         }
@@ -105,26 +100,23 @@ public class PlayerCharacter_1 : MonoBehaviour
                     Player.transform.position = new Vector3(Player.transform.position.x, 3.5f, Player.transform.position.z);
                 }
             }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Application.Quit();
-            }
         }
     }
 
-    private void OnTriggerEnter(Collider aCol)
+    private void OnCollisionEnter2D(Collision2D aCol)
     {
-        if (aCol.tag.Equals("Money"))
+        print("Colliding!");
+        print(aCol.gameObject.tag.ToString());
+        if (aCol.gameObject.tag.Equals("Money"))
         {
             Money++;
             Source.Play();
-            Destroy(aCol);
+            Destroy(aCol.gameObject);
         }
 
-        if (aCol.tag.Equals("BigMoney"))
+        if (aCol.gameObject.tag.Equals("BigMoney"))
         {
-            Destroy(aCol);
+            Destroy(aCol.gameObject);
 
             for (int i = 0; i < 5; i++)
             {
@@ -133,7 +125,7 @@ public class PlayerCharacter_1 : MonoBehaviour
             }
         }
 
-        if (aCol.tag.Equals("Enemy"))
+        if (aCol.gameObject.tag.Equals("Enemy"))
         {
             Health = 0;
         }
