@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private direction PatrolStatus = direction.Right;
     private float time = 0;
     private float detectionTime = 2f;
+    public Animator animator;
 
     // Use this for initialization
     private void Start()
@@ -35,33 +36,41 @@ public class Enemy : MonoBehaviour
         switch (PatrolStatus)
         {
             case direction.Right:
-                {
+                {                  
                     if (gameObject.transform.position.x >= 6)
                     {
+                        animator.SetInteger("Direction", 0);
                         gameObject.transform.position = new Vector3(6, 2, -2);
                         PatrolStatus = direction.Down;
                     }
                     else
                     {
+                        animator.SetInteger("Direction", 0);
                         gameObject.transform.position = new Vector3(gameObject.transform.position.x + Speed, gameObject.transform.position.y, gameObject.transform.position.z);
                     }
                     break;
                 }
             case direction.Down:
                 {
+                    
+
                     if (gameObject.transform.position.y <= -2)
                     {
+                        
                         gameObject.transform.position = new Vector3(6, -2, -2);
                         PatrolStatus = direction.Left;
                     }
                     else
                     {
+                        animator.SetInteger("Direction", 1);
                         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - Speed, gameObject.transform.position.z);
                     }
                     break;
                 }
             case direction.Left:
                 {
+                    animator.SetInteger("Direction", 2);
+
                     if (gameObject.transform.position.x <= 0)
                     {
                         gameObject.transform.position = new Vector3(0, -2, -2);
@@ -75,6 +84,8 @@ public class Enemy : MonoBehaviour
                 }
             case direction.Up:
                 {
+                    animator.SetInteger("Direction", 3);
+
                     if (gameObject.transform.position.y >= 2)
                     {
                         gameObject.transform.position = new Vector3(0, 2, -2);
