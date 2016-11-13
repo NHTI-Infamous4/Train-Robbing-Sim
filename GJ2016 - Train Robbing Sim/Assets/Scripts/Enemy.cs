@@ -84,4 +84,9 @@ public class Enemy : MonoBehaviour
                 }
         }
     }
+
+    public void SpeedUp()
+    {
+        Speed += 0.1f;
+    }
 }
