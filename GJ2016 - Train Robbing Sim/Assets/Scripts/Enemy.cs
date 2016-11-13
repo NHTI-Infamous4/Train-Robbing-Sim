@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 public class Enemy : MonoBehaviour
 {
+    public AudioMixerSnapshot Level;
+    public AudioClip Normal;
+    public AudioClip Intense;
+    public AudioClip NewSource;
+    public AudioSource Source;
+
     private enum direction
     {
         Right,
@@ -23,6 +30,7 @@ public class Enemy : MonoBehaviour
         Health = 100;
         gameObject.transform.position = new Vector3(0, 2, -2);
         Player = GameObject.FindGameObjectWithTag("Player");
+        NewSource = Source.clip;
     }
 
     // Update is called once per frame
@@ -94,6 +102,10 @@ public class Enemy : MonoBehaviour
             if (Physics2D.Raycast(transform.position, toPlayer, Mathf.Infinity, 1 << 8).collider.gameObject.tag == "Player")
             {
                 print("I see you!");
+                if (time != 0)
+                {
+                    NewSource = Intense;
+                }
                 if (time != 0 && Time.time >= time + detectionTime)
                 {
                     Destroy(Player);
@@ -104,7 +116,16 @@ public class Enemy : MonoBehaviour
                     time = Time.time;
                 }
             }
-            else time = 0;
+            else
+            {
+                time = 0;
+                NewSource = Normal;
+            }
+        }
+        if (NewSource != Source.clip)
+        {
+            Source.clip = NewSource;
+            Source.Play();
         }
     }
 
