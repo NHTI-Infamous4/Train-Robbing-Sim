@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
         EnemyObject = GameObject.FindGameObjectWithTag("Enemy");
-        EnemyScript = (Enemy)EnemyObject.GetComponent<Enemy>();
+        if (EnemyObject)
+        {
+            EnemyScript = (Enemy)EnemyObject.GetComponent<Enemy>();
+        }
     }
 
     // Update is called once per frame
