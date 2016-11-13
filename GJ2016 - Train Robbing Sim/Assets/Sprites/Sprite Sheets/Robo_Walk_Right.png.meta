@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 4f7620e4fb53ce54497be09fa708053f
-timeCreated: 1479061170
+guid: bc3c97c755eb34c4a8a765b131379657
+timeCreated: 1479061207
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Robo_Walk_0
-    21300002: Robo_Walk_1
-    21300004: Robo_Walk_2
-    21300006: Robo_Walk_3
-    21300008: Robo_Walk_4
-    21300010: Robo_Walk_5
-    21300012: Robo_Walk_6
-    21300014: Robo_Walk_7
+    21300000: Robo_Walk_Right_0
+    21300002: Robo_Walk_Right_1
+    21300004: Robo_Walk_Right_2
+    21300006: Robo_Walk_Right_3
+    21300008: Robo_Walk_Right_4
+    21300010: Robo_Walk_Right_5
+    21300012: Robo_Walk_Right_6
+    21300014: Robo_Walk_Right_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,11 +61,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Robo_Walk_0
+      name: Robo_Walk_Right_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -74,11 +74,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_1
+      name: Robo_Walk_Right_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 0
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -87,11 +87,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_2
+      name: Robo_Walk_Right_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 0
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -100,11 +100,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_3
+      name: Robo_Walk_Right_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 0
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -113,11 +113,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_4
+      name: Robo_Walk_Right_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -126,11 +126,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_5
+      name: Robo_Walk_Right_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -139,11 +139,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_6
+      name: Robo_Walk_Right_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -152,10 +152,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Robo_Walk_7
+      name: Robo_Walk_Right_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 0
         y: 0
         width: 32
         height: 32

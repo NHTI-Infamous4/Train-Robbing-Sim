@@ -7,6 +7,7 @@ public class PlayerCharacter_1 : MonoBehaviour
     public int Health;
     public int Money;
     private bool InputEnabled = true;
+    public Animator animator;
     //private Animator animator;
 
     // Use this for initialization
@@ -26,27 +27,27 @@ public class PlayerCharacter_1 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        /*
+        
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");
 
         if (vertical > 0)
         {
-            animator.SetInteger("Direction", 2);
+            animator.SetInteger("PlayerDirection", 2);
         }
         else if (vertical < 0)
         {
-            animator.SetInteger("Direction", 0);
+            animator.SetInteger("PlayerDirection", 0);
         }
         else if (horizontal > 0)
         {
-            animator.SetInteger("Direction", 1);
+            animator.SetInteger("PlayerDirection", 1);
         }
         else if (horizontal < 0)
         {
-            animator.SetInteger("Direction", 3);
+            animator.SetInteger("PlayerDirection", 3);
         }
-        */
+        
 
         if (Player.transform.position.x >= 7 &&
             Player.transform.position.y < .75f &&
