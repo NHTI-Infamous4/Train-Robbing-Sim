@@ -30,7 +30,7 @@ public class CartMovement : MonoBehaviour
             lastShake = Time.time;
             isOffset = true;
         }
-        if (Time.time >= lastTie + 0.5f)
+        if (Time.time >= lastTie + 0.1f)
         {
             Instantiate(Tie, new Vector3(18f, 0), Quaternion.identity);
             lastTie = Time.time;

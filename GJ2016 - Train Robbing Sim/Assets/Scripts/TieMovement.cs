@@ -13,7 +13,7 @@ public class TieMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Tie.transform.position = new Vector3(Tie.transform.position.x - 0.1f, Tie.transform.position.y, Tie.transform.position.z);
+        Tie.transform.position = new Vector3(Tie.transform.position.x - 0.5f, Tie.transform.position.y, Tie.transform.position.z);
         if (Tie.transform.position.x <= -13.25f)
         {
             Destroy(Tie);
