@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Application.Quit();
+                SceneManager.LoadScene("Main_Menu");
             }
             if (Player.transform.position.x >= 7 &&
                 Player.transform.position.y < .75f &&
