@@ -26,9 +26,10 @@ public class PlayerCharacter_1 : MonoBehaviour
             Destroy(gameObject);
         }
 
+        /*
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");
-        /*
+
         if (vertical > 0)
         {
             animator.SetInteger("Direction", 2);
