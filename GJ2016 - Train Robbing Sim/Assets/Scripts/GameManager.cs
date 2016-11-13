@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Camera;
+    public GameObject EnemyObject;
+    public Enemy EnemyScript;
     public AudioMixerSnapshot Coin;
 
     // Use this for initialization
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
             print("ERROR: No player!");
             Application.Quit();
         }
+        EnemyObject = GameObject.FindGameObjectWithTag("Enemy");
+        EnemyScript = (Enemy)EnemyObject.GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     Camera.transform.position = new Vector3(0, 0, -10f);
+                    EnemyScript.SpeedUp();
                 }
             }
         }
