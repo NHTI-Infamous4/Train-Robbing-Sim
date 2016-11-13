@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuMusic : MonoBehaviour
 {
@@ -18,9 +19,13 @@ public class MenuMusic : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+    {       
+        
+        
+    }
 
-        
-        
+    public void LoadOnClick(int level)
+    {
+        SceneManager.LoadScene(level);
     }
 }

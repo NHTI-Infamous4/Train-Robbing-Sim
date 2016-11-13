@@ -78,6 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RPGTALK\Demo\Scripts\DemoScript.cs" />
+    <Compile Include="Assets\RPGTALK\RPGTalk.cs" />
     <Compile Include="Assets\Scripts\CartMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -85,6 +87,10 @@
     <Compile Include="Assets\Scripts\MenuMusic.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacter_1.cs" />
     <Compile Include="Assets\Scripts\TieMovement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\RPGTALK\Demo\Talks\DemosText.txt" />
+    <None Include="Assets\RPGTALK\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
