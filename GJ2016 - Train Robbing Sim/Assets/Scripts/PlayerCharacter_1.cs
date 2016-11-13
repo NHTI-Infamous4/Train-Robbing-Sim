@@ -27,7 +27,6 @@ public class PlayerCharacter_1 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");
 
@@ -47,7 +46,6 @@ public class PlayerCharacter_1 : MonoBehaviour
         {
             animator.SetInteger("PlayerDirection", 3);
         }
-        
 
         if (Player.transform.position.x >= 7 &&
             Player.transform.position.y < .75f &&

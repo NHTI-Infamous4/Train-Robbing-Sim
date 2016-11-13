@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         switch (PatrolStatus)
         {
             case direction.Right:
-                {                  
+                {
                     if (gameObject.transform.position.x >= 6)
                     {
                         gameObject.transform.position = new Vector3(6, 2, -2);
@@ -59,8 +59,6 @@ public class Enemy : MonoBehaviour
                 }
             case direction.Down:
                 {
-                    
-
                     if (gameObject.transform.position.y <= -2)
                     {
                         gameObject.transform.position = new Vector3(6, -2, -2);
@@ -75,8 +73,6 @@ public class Enemy : MonoBehaviour
                 }
             case direction.Left:
                 {
-                    
-
                     if (gameObject.transform.position.x <= 0)
                     {
                         gameObject.transform.position = new Vector3(0, -2, -2);
@@ -91,8 +87,6 @@ public class Enemy : MonoBehaviour
                 }
             case direction.Up:
                 {
-                    
-
                     if (gameObject.transform.position.y >= 2)
                     {
                         gameObject.transform.position = new Vector3(0, 2, -2);
@@ -146,6 +140,6 @@ public class Enemy : MonoBehaviour
 
     public void SpeedUp()
     {
-        Speed += 0.1f;
+        Speed += 0.05f;
     }
 }
