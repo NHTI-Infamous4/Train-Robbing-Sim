@@ -16,7 +16,7 @@ public class DemoScript : MonoBehaviour
 
     public GameObject askWho;
 
-    public InputField name;
+    public new InputField name;
 
     public GameObject wall;
     public GameObject particle;
